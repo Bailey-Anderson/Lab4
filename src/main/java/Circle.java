@@ -12,9 +12,9 @@ public class Circle {
     private double radius;
     private final double PI = 3.14159;
     
-    public Circle(double radiusGiven)
+    public Circle(double inputRadius)
     {
-        radius = radiusGiven;
+        this.radius = inputRadius;
     }
     
     public Circle() 
@@ -22,9 +22,9 @@ public class Circle {
         radius = 0.0;
     }
     
-    public void setRadius(double radiusGiven) 
+    public void setRadius(double inputRadius) 
     {
-        radius = radiusGiven;
+        this.radius = inputRadius;
     }
     
     public double getRadius() 
