@@ -16,12 +16,11 @@ public class CarClassMain
     public static void main(String[] args) 
     {
 
+    Scanner keyboard = new Scanner (System.in);
+        
     int yearModel = 0;
     int speed = 0;
-    String make=null;
-
-
-    Scanner keyboard = new Scanner (System.in);
+    String make = null;
 
     CarClass myCar = new CarClass(yearModel, make);
 
@@ -33,14 +32,19 @@ public class CarClassMain
 
     System.out.println("How fast is your car going?  ");
     speed = keyboard.nextInt();
+    
     myCar.setSpeed(speed);
 
-    
     for(int i=0; i<5; i++)
     {
         myCar.accelerate();
     }
     
+    for(int i=0; i>5; i++)
+    {
+        myCar.brake();
+    }
+
     System.out.println("Car's speed: " + myCar.getSpeed());
     
     }
