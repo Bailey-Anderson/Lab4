@@ -22,13 +22,13 @@ public class CarClassMain
     int speed = 0;
     String make = null;
 
-    CarClass myCar = new CarClass(yearModel, make);
-
     System.out.println("What is the year of your car? ");
     yearModel = keyboard.nextInt();
 
     System.out.println("What is the make of your car? ");
     make = keyboard.next();
+    
+    CarClass myCar = new CarClass(yearModel, make);
 
     System.out.println("How fast is your car going?  ");
     speed = keyboard.nextInt();
@@ -38,11 +38,13 @@ public class CarClassMain
     for(int i=0; i<5; i++)
     {
         myCar.accelerate();
+        System.out.println("Current speed: " + myCar.getSpeed());
     }
     
-    for(int i=0; i>5; i++)
+    for(int i=0; i<5; i++)
     {
         myCar.brake();
+        System.out.println("Current speed: " + myCar.getSpeed());
     }
 
     System.out.println("Car's speed: " + myCar.getSpeed());
